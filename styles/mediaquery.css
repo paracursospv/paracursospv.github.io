@@ -1,0 +1,189 @@
+@media (max-width: 1200px) {
+
+    section.photo,
+    section.ilustra {
+        margin-top: 0em;
+    }
+
+    .photo-home a img,
+    .ilustra-home a img {
+        width: 15em;
+        height: 15em;
+    }
+
+    /* GRID-CONTENIDO */
+
+    .grid-contenedor {
+        grid-template-areas: 'Autor1 Autor2''Autor3 Autor4';
+        margin: 0% auto 10% auto;
+    }
+
+    .grid-contenedor div {
+        width: 100%;
+        height: 14rem;
+    }
+
+    .autor1 img,
+    .autor2 img,
+    .autor3 img,
+    .autor4 img {
+        width: 15rem;
+        height: 15rem;
+
+    }
+
+    .cita-photo,
+    .cita-ilustra {
+        width: 80%;
+        margin: -2% auto 0 auto;
+    }
+
+    .cita-photo,
+    .cita-ilustra,
+    .autor-leyenda-photo,
+    .autor-leyenda-ilustra {
+        font-size: 1.2em;
+    }
+
+    .autor-leyenda-photo,
+    .autor-leyenda-ilustra {
+        width: 50%;
+        text-align: right;
+        float: right;
+        margin-top: 2%;
+        margin-right: 10%;
+
+    }
+
+
+    /* FIN GRID-CONTENIDO */
+
+
+
+}
+
+@media (max-width: 850px) {
+
+    /* GENERALES */
+    header {
+        flex-direction: column;
+    }
+
+    footer {
+        font-size: .8em;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 1% auto 0 auto;
+        padding: 0 1em;
+
+    }
+
+    .footer1,
+    .footer2,
+    .footer3 {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin: 1% auto;
+
+    }
+
+    .footer1 span {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    /* FIN GENERALES */
+
+    .grid-contenedor {
+        margin: 0% auto 13% auto;
+    }
+
+    .grid-contenedor div {
+        width: 100%;
+        height: 14rem;
+    }
+
+    .autor1 img,
+    .autor2 img,
+    .autor3 img,
+    .autor4 img {
+        width: 12rem;
+        height: 12rem;
+
+    }
+
+    .autor1 span,
+    .autor2 span,
+    .autor3 span,
+    .autor4 span {
+        bottom: 60px;
+        font-size: 1em;
+    }
+
+    .cita-photo,
+    .cita-ilustra {
+        margin: -8% auto 0 auto;
+        font-size: 1.1em;
+    }
+
+    /* INDEX-HOME */
+
+    .logo-home h1 {
+        font-size: 3em;
+        position: absolute;
+        bottom: 19%;
+    }
+
+    .columnauno,
+    .columnados {
+        position: relative;
+        top: -30%;
+    }
+
+    .photo-home a img,
+    .ilustra-home a img {
+        width: 10em;
+        height: 10em;
+    }
+
+
+    /* FIN INDEX-HOME */
+
+
+
+    /* PÁGS. 2º NIVEL */
+
+    a.logoBlanco h1,
+    a.logoNegro h1 {
+        font-size: 1.5em;
+        width: 100%;
+        z-index: 20;
+        margin: 0;
+    }
+
+    a.logoBlanco,
+    a.logoNegro {
+        margin: 0;
+    }
+
+    nav.menuBlanco,
+    nav.menuNegro {
+        margin: -.5em 0 0 0;
+    }
+
+    nav.menuBlanco > a > span.material-icons-round,
+    nav.menuNegro > a > span.material-icons-round {
+        padding: 0;
+        margin: 0;
+        font-size: .7em;
+        align-content: center;
+    }
+
+
+
+    /* FIN PÁGS. 2º NIVEL */
+
+}

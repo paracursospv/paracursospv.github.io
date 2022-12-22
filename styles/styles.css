@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Open+Sans&display=swap');
+
+@import "styles-galerias.css"screen, projection;
+
+/*-- PARA FUNDIDO DE PÁGS.  ------*/
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*-- FIN PARA FUNDIDO DE PÁGS.  ------*/
+
+
+/*--   <!--h1 id="construccion">EN CONSTRUCCIÓN</h1-->   ------*/
+
+#construccion {
+    color: orange;
+    font-size: 5em;
+    text-align: center;
+    margin: 10% auto;
+    text-shadow: 0 0 10px red;
+    -webkit-text-stroke: .001em yellow;
+}
+
+/*-- ESTILOS GENERALES  ------*/
+
+* {
+    /*-margin y padding para poner todos los elementos a cero -*/
+    margin: 0;
+    padding: 0;
+    /*-para que perfiles y paddings de cajas no sumen tamaños -*/
+    box-sizing: border-box;
+
+}
+
+html {
+    height: 100vh;
+    max-height: 100vh;
+
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+body {
+    font-family: 'Allerta Stencil', sans-serif;
+    height: 100vh;
+    max-height: 100vh;
+    padding: 0 1%;
+
+}
+
+h2 {
+    margin-bottom: 1%;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 5%;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 1%;
+}
+
+
+/*-- FIN ESTILOS GENERALES  ------*/
+
+
+
+
+
+/*-- ESTILOS DEL HEADER  ------*/
+
+header {
+    display: flex;
+    /*background-color: rgba(5, 255, 255, .3);*/
+    color: white;
+
+    justify-content: space-between;
+    /*Justifica los elementos en el eje principal - Un elemento está en una esquina y el otro en la otra*/
+
+    align-items: center;
+    /* alinea los elementos en vertical*/
+
+    padding: .5em;
+
+}
+
+.logoBlanco,
+.logoNegro {
+    display: flex;
+    font-size: 1.5em;
+    white-space: nowrap;
+}
+
+a.logoBlanco,
+a.logoNegro {
+    background-color: transparent;
+    margin: 0 0 .5em 2em;
+    text-decoration: none;
+
+}
+
+a.logoBlanco {
+    color: white;
+}
+
+a.logoNegro {
+    color: black;
+}
+
+a.logoBlanco:hover {
+    color: black;
+    text-shadow: 0px 0px 10px #eed189;
+
+}
+
+a.logoNegro:hover {
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+
+
+/*--ESTILOS DEL NAVEGADOR (AMBOS COLORES) ------*/
+
+nav.menuBlanco,
+nav.menuNegro {
+
+    padding: .5em;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 3em;
+    align-self: center;
+
+}
+
+nav.menuBlanco a,
+nav.menuNegro a {
+
+    text-decoration: none;
+    margin: 0 .2em;
+}
+
+
+nav.menuBlanco > a > span.material-icons-round {
+    color: white;
+}
+
+nav.menuNegro > a > span.material-icons-round {
+    color: black;
+}
+
+nav.menuBlanco > a:hover > span.material-icons-round {
+    color: black;
+    text-shadow: 0px 0px 10px #eed189;
+}
+
+nav.menuNegro > a:hover > span.material-icons-round {
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+
+
+/*--FIN ESTILOS DEL NAVEGADOR (AMBOS COLORES) ------*/
+
+/*--FIN ESTILOS DEL HEADER  ------------------------*/
+
+
+
+/* ------------- ESTILOS CONTENEDOR 1 -----------------*/
+
+section.photo > .contenedor .tituConte,
+section.ilustra > .contenedor .tituConte {
+    width: 102.4%;
+    padding: 1% 0 .1% 1%;
+    margin: 0% -1% 1.5% -1.3%;
+    border-radius: .8em .8em 0 0;
+    text-transform: uppercase;
+}
+
+section.photo > .contenedor .tituConte {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+section.ilustra > .contenedor .tituConte {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.contenedor {
+    /*background-color: rgba(255, 255, 0, 0.22);*/
+    height: auto;
+    margin: -4% 2% 2% 2%;
+    padding: 0% 1%;
+    border: white solid .2em;
+    border-radius: 1em;
+}
+
+/* ------------- FIN ESTILOS CONTENEDOR 1 -----------------*/
+
+
+
+/*--ESTILOS DEL GRID CONTENEDOR  ------*/
+
+section.photo,
+section.ilustra {
+    margin-top: 5em;
+}
+
+section.ilustra > .contenedor,
+section.ilustra > .contenedor h1,
+section.ilustra > .contenedor h2,
+section.ilustra > .contenedor h3,
+section.ilustra > .contenedor h4,
+section.ilustra > .contenedor h5,
+section.ilustra > .contenedor h6,
+section.ilustra > .contenedor p,
+section.ilustra > .contenedor a,
+section.ilustra > .contenedor img {
+    color: black;
+    border-color: black;
+}
+
+section.photo > .contenedor,
+section.photo > .contenedor h1,
+section.photo > .contenedor h2,
+section.photo > .contenedor h3,
+section.photo > .contenedor h4,
+section.photo > .contenedor h5,
+section.photo > .contenedor h6,
+section.photo > .contenedor p,
+section.photo > .contenedor a,
+section.photo > .contenedor img {
+    color: white;
+    border-color: white;
+}
+
+section.photo > div.grid-contenedor > .autor1 img,
+section.photo > div.grid-contenedor > .autor2 img,
+section.photo > div.grid-contenedor > .autor3 img,
+section.photo > div.grid-contenedor > .autor4 img {
+    color: white;
+    border-color: white;
+
+}
+
+section.ilustra > div.grid-contenedor > .autor1 img,
+section.ilustra > div.grid-contenedor > .autor2 img,
+section.ilustra > div.grid-contenedor > .autor3 img,
+section.ilustra > div.grid-contenedor > .autor4 img {
+    color: black;
+    border-color: black;
+}
+
+section.ilustra > div.grid-contenedor > .autor1 img {
+    object-position: right;
+}
+
+.grid-contenedor {
+    display: grid;
+    grid-template-areas: 'Autor1 Autor2 Autor3 Autor4';
+    text-align: center;
+    grid-gap: 5%;
+    margin-bottom: 6em;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.grid-contenedor div {
+    display: grid;
+    width: 100%;
+    height: 18rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.autor1 img,
+.autor2 img,
+.autor3 img,
+.autor4 img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    border: 5px solid;
+    transition: 2s;
+    object-position: top;
+}
+
+.autor1 span,
+.autor2 span,
+.autor3 span,
+.autor4 span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    bottom: 70px;
+    margin: auto;
+    z-index: 100;
+    font-size: 1.2em;
+    width: 70%
+}
+
+.autor1 a,
+.autor2 a,
+.autor3 a,
+.autor4 a {
+    color: #eed189;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px black;
+}
+
+section.photo div.grid-contenedor > .autor1 a:hover img,
+section.photo div.grid-contenedor > .autor2 a:hover img,
+section.photo div.grid-contenedor > .autor3 a:hover img,
+section.photo div.grid-contenedor > .autor4 a:hover img {
+    box-shadow: 0px 0px 20px #eed189;
+    filter: sepia(100%);
+    transition: 1s;
+}
+
+section.ilustra > div.grid-contenedor > .autor1 a:hover img,
+section.ilustra > div.grid-contenedor > .autor2 a:hover img,
+section.ilustra > div.grid-contenedor > .autor3 a:hover img,
+section.ilustra > div.grid-contenedor > .autor4 a:hover img {
+    box-shadow: 0px 0px 20px black;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+section.photo > .cita-photo p,
+section.photo > .autor-leyenda-photo p {
+    color: white;
+}
+
+section.ilustra > .cita-ilustra p,
+section.ilustra > .autor-leyenda-ilustra p {
+    color: black;
+}
+
+.cita-photo,
+.autor-leyenda-photo,
+.cita-ilustra,
+.autor-leyenda-ilustra {
+    font-size: 2em;
+    transition: 2s;
+}
+
+.cita-photo,
+.cita-ilustra {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
+}
+
+.autor-leyenda-photo,
+.autor-leyenda-ilustra {
+    width: 50%;
+    text-align: right;
+    float: right;
+    margin-top: 2%;
+    margin-right: 30%;
+}
+
+.autor-leyenda-photo {
+    margin-right: 30%;
+}
+
+.autor-leyenda-ilustra {
+    margin-right: 10%;
+}
+
+
+/*--FIN ESTILOS DEL GRID CONTENEDOR  ------*/
+
+
+/*---- FORMULARIO DE CONTACTO ---------*/
+
+#contenedorFormulario {
+    width: 85%;
+    margin: auto;
+    max-height: 90vh;
+}
+
+form {
+    font-family: sans-serif;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 95%;
+    margin: -1% auto .5% 2%;
+    padding: 2%;
+    border-radius: .5rem;
+}
+
+/*---1º formulario 
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 7%;
+    padding: 1.5%;
+    font-size: 1.1em;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton {
+    background-color: red;
+    color: white;
+    padding: 2%;
+    margin-bottom: 0;
+       border-radius: .5rem;
+}
+
+#boton:hover {
+    background-color: #908a48;
+    color: black;
+    cursor: pointer;
+
+}
+-----*/
+
+.formulario__input,
+.formulario__label,
+.formulario__submit {
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+    color: white;
+}
+
+.formulario__input {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, .5);
+    border: 2px solid rgba(255, 255, 255, .3);
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.formulario__input:focus {
+    outline: 2px solid rgba(255, 255, 255, .8);
+}
+
+.formulario__input:focus + .formulario__label {
+    margin-top: -118px;
+}
+
+.formulario__label {
+    padding-left: 15px;
+    position: absolute;
+    margin-top: -67px;
+    z-index: -1;
+    transition: all 0.2s;
+}
+
+.formulario__submit {
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 20px;
+    color: white;
+    padding: 1em 2em;
+    cursor: pointer;
+    border-color: white;
+    width: auto;
+    margin: auto;
+    font-size: 1.2em;
+}
+
+.formulario__submit:hover {
+    background-color: rgba(255, 255, 255, .8);
+    color: black;
+}
+
+.fijar {
+    /*--Estilo para la función de JS */
+    margin-top: -118px;
+}
+
+
+/*---- FIN FORMULARIO DE CONTACTO ---------*/
+
+
+/*-- ESTILOS DEL FOOTER  ------*/
+
+footer.photo,
+footer.photo a {
+    color: white;
+    text-decoration: none;
+}
+
+footer.ilustra,
+footer.ilustra a {
+    color: black;
+    text-decoration: none;
+}
+
+footer.photo,
+footer.ilustra {
+    /*mix-blend-mode: difference;
+    background-color: rgba(255, 255, 255, .1);*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2em 1em;
+    margin: 1% auto 0 auto;
+    position: absolute;
+    bottom: 0;
+    transition: 2s;
+}
+
+.footer1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+
+.footer1 a span {
+    text-shadow: none;
+}
+
+.footer1 span {
+    margin: 0 .5em;
+    font-size: 3em;
+}
+
+.footer2 {
+    text-align: center;
+}
+
+.footer3 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2%;
+
+}
+
+.footer3 img {
+    margin: 0 1em;
+    width: 3em;
+}
+
+footer.photo .footer3 img {
+    color: white;
+    filter: invert(100%);
+}
+
+footer.photo .footer3 a:hover {
+    color: black;
+    filter: invert(100%) drop-shadow(1px 1px 5px #eed189);
+}
+
+footer.ilustra .footer3 img {
+    color: black;
+
+}
+
+footer.ilustra .footer3 a:hover {
+    color: white;
+    filter: invert(100%) drop-shadow(1px 1px 5px black);
+
+}
+
+footer.photo a:hover {
+    filter: drop-shadow(0px 0px 5px #eed189);
+    color: black;
+}
+
+footer.ilustra a:hover {
+    filter: drop-shadow(1px 1px 5px black);
+    color: white;
+}
+
+
+/*-- ESTILOS DEL FOOTER  ------*/

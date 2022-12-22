@@ -1,0 +1,843 @@
+/*---- SLIDER 4 - Slider manual N° 2 HTML y CSS (Seb Janiak, ...) ---*/
+
+.container-slider4 {
+    height: 54vh;
+}
+
+.slider4 {
+    width: 700px;
+    height: 500px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    gap: .5%;
+
+}
+
+.slider4 ul {
+    /* El ancho variará respecto al numero de imágenes que tengamos (ejm: 4 imgs-400%, 7 imgs-700%...)  */
+    width: 400%;
+    height: 390px;
+    display: flex;
+    list-style: none;
+    /*order: 1;*/
+}
+
+.slider4 ul li {
+    width: 100%;
+    height: auto;
+}
+
+.slider4 ul li img {
+    width: auto;
+    height: 100%;
+    margin: auto;
+}
+
+.slider4 input[type="radio"] {
+    display: none;
+}
+
+.slider4 input[type="radio"] + label {
+    display: block;
+    width: 24.62%;
+    height: 60px;
+    cursor: pointer;
+    /*order: 2;*/
+    margin: 2% 0;
+    border: 1px solid;
+}
+
+.slider4 > #sbutton1 + label {
+    background: url(../img/photo/Seb-Janiak/nubes/01-nubes-Seb-Janiak.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.slider4 > #sbutton2 + label {
+    background: url(../img/photo/Seb-Janiak/bubles/01-bubles-Seb-Janiak.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.slider4 > #sbutton3 + label {
+    background: url(../img/photo/Seb-Janiak/mariposas/01-mariposa-Seb-Janiak.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.slider4 > #sbutton4 + label {
+    background: url(../img/photo/Seb-Janiak/modelos/01-model-Seb-Janiak.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.slider4 > #sbutton1:checked ~ ul {
+    margin-left: 0;
+}
+
+.slider4 > #sbutton2:checked ~ ul {
+    margin-left: -100%;
+}
+
+.slider4 > #sbutton3:checked ~ ul {
+    margin-left: -200%;
+}
+
+.slider4 > #sbutton4:checked ~ ul {
+    margin-left: -300%;
+}
+
+
+/*---- FIN SLIDER 4 - Slider manual N° 2 HTML y CSS (Seb Janiak, ...) ---*/
+
+
+/*---- SLIDER 3 - Slider manual N° 1 HTML y CSS (Erich Caparras, ...) ---*/
+
+.container-slider3 {
+    height: 54vh;
+
+}
+
+.slider3 {
+    background: rgba(255, 255, 255, .2);
+    width: 50%;
+    height: 50vh;
+    margin: auto;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow:
+        0 0 0px 3px black,
+        0 0 10px 10px white,
+        0 0 10px 15px black,
+        0 0 25px 25px white;
+
+}
+
+.slider3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: all 1s;
+
+}
+
+.slider3 input[type="radio"] {
+    display: none;
+
+    /*Desactivamos con display: none, para que en vez de actuar el button funcione el label 
+    
+    position: relative;
+    z-index: 50;
+    margin: 10px;
+    
+  -----*/
+}
+
+.slider3 input[type="radio"]:checked ~ img {
+    opacity: 1;
+}
+
+.slider3 input[type="radio"] + label {
+    position: relative;
+    z-index: 50;
+    margin: 10px;
+
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.slider3 input[type="radio"]:checked + label {
+    background: black;
+    border: 2px solid white;
+}
+
+/*---- FIN SLIDER 3 - Slider manual N° 1 HTML y CSS (Erich Caparras, ...) ---*/
+
+
+/*---- SLIDER 2 - HTML, CSS y JS (Cristina G. Rodero, Kay Lee, ...) ---*/
+
+.container-slider2 {
+    width: 90%;
+    max-width: 900px;
+    margin: 1.5% auto;
+    overflow: hidden;
+
+    box-shadow: 0 0 0 5px #fff, 0 15px 50px;
+    position: relative;
+
+}
+
+.slider2 {
+    display: flex;
+    /* Esta cantidad dependera del numero de imgenes de nuetro slider (por ejemplo 400%, 4 imagenes - 100% cada una) */
+    width: 2200%;
+    height: 500px;
+
+    /*Este valor hará que se coloque el primer elemento en pantalla de nuevo, después de que se moviese el último elemento al primero con el JS*/
+    margin-left: -100%;
+}
+
+.slider2__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.slider2__section {
+    width: 100%;
+}
+
+/*--- Para primera diapo (funciona en todas las diapos VER fallos) ---*/
+
+
+#conteIlus .primeraDiapo img {
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.8);
+}
+
+#conteIlus .txtprimeraDiapo {
+    background: rgba(0, 0, 0, .2);
+}
+
+.primeraDiapo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 10% auto;
+
+}
+
+.txtprimeraDiapo {
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .2);
+    width: 50%;
+    height: 300px;
+    align-items: center;
+    border: 3px solid;
+    padding: 2%;
+}
+
+.txtprimeraDiapo p {
+    width: 100%;
+}
+
+.primeraDiapo img {
+    border-radius: 50%;
+    width: 20em;
+    height: 20em;
+    object-fit: cover;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 20px 10px rgba(255, 255, 255, 0.8);
+    border: 5px solid;
+}
+
+/*--- Fin para primera diapo ---*/
+
+.slider2__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, .3);
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 38px;
+    font-size: 2em;
+}
+
+.slider2__btn:hover {
+    color: black;
+    background: white;
+}
+
+.slider2__btn--left {
+    left: 10px;
+}
+
+.slider2__btn--right {
+    right: 10px;
+}
+
+/*---- FIN SLIDER 2  ---*/
+
+
+/*-----------------------------------------------------------------*/
+
+
+/*---- SLIDER 1 solo HTML y CSS (CHEMA MADOZ, AYKUT, ... ) ---*/
+
+.slider1 {
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.slider1 li {
+    margin: .5%;
+
+}
+
+.slider1 img {
+    width: 8em;
+    height: 6em;
+    border: white solid 2px;
+    object-fit: cover;
+
+}
+
+.slider1-galeria {
+    /* ------------------------------- modal */
+    /*display: none;*/
+    padding-top: 5%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.slider1-galeria:target {
+    /*display: block;*/
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+}
+
+#contePhoto,
+#conteIlus {
+
+    max-height: 35rem;
+}
+
+section.photo > .contenedor > #contePhoto > .slider1-galeria:target {
+    background: rgba(100, 0, 0, .8);
+
+}
+
+section.ilustra > .contenedor > #conteIlus > .slider1-galeria:target {
+    background: rgba(0, 0, 0, .8);
+
+}
+
+.slider1-galeria h3 {
+    text-align: center;
+    margin: 15px 0;
+    color: white !important;
+}
+
+
+.fotos-slaider1 {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fotos-slaider1 a {
+    color: #fff !important;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
+
+}
+
+.fotos-slaider1 a:nth-child(2) {
+    margin: 0;
+    height: 100%;
+    flex-shrink: 2;
+}
+
+.fotos-slaider1 img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border: 7px solid #fff !important;
+    box-sizing: border-box;
+
+}
+
+.cerrar {
+    display: block;
+    background: #fff;
+    width: 45px;
+    height: 45px;
+    margin: .5em auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    align-content: center;
+    color: #000 !important;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 35px;
+
+}
+
+
+
+
+
+
+/*---- FIN SLIDER 1  ---*/
+
+
+
+
+
+/*---- Galería de vídeos */
+
+
+#contenedorVideos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr;
+    gap: 3% 1%;
+    width: 100%;
+    padding: 1%;
+    margin: 0 auto;
+    overflow: auto;
+    height: 35rem;
+}
+
+#contenedorVideos::-webkit-scrollbar {
+    width: 20px;
+    background: gray;
+    border-radius: 20px;
+}
+
+#contenedorVideos::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 15px;
+}
+
+#contenedorVideos div {
+    background-color: rgba(105, 105, 105, 0.31);
+    border-radius: .5em;
+    width: 100%;
+    padding: 2.5%;
+}
+
+iframe {
+    width: 100%;
+    background-color: black;
+}
+
+.v1 {
+    grid-column: ;
+    grid-row: auto;
+
+}
+
+/*---- Galería de vídeos */
+
+
+/*------------------------------------------- GALERÍA HISTÓRICO -*/
+
+/*---- GALERÍA HISTÓRICO ---*/
+
+.tituConte {
+    display: flex;
+}
+
+.anclas1 {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
+}
+
+.anclas1 a {
+    display: block;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    min-width: 10%;
+    height: 2.4em;
+    border-radius: .5em;
+    padding: 5px;
+    line-height: 1.8em;
+    white-space: nowrap;
+
+}
+
+.anclas1 a:hover {
+    background-color: red;
+}
+
+#contenfotos {
+    align-items: center;
+    width: 90%;
+    height: 35rem;
+    margin: auto;
+    margin-bottom: 15%;
+
+}
+
+.filauno,
+.filados,
+.filatres {
+    display: flex;
+    align-items: center;
+    background-image: url(../img/historico/fondo-mesa.png);
+    width: 86%;
+    height: 95%;
+    margin-bottom: 5%;
+    margin: auto;
+
+}
+
+#contenedorHistorico {
+    width: 100%;
+    padding: 1% 1%;
+    margin: 0 auto;
+    overflow: auto;
+    height: 37rem;
+}
+
+#contenedorHistorico::-webkit-scrollbar {
+    width: 10px;
+    background: gray;
+    border-radius: 10px;
+}
+
+#contenedorHistorico::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
+
+#Foto1 img,
+#Foto2 img,
+#Foto3 img,
+#Foto4 img,
+#Foto5 img,
+#Foto6 img,
+#Foto7 img {
+
+    background-color: white;
+    border: solid 3px white;
+    border-radius: 2%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    transition: 1s;
+    position: relative;
+    width: 5rem;
+}
+
+.filauno > #Foto1 img:hover,
+.filados > #Foto1 img:hover,
+.filauno > #Foto2 img:hover,
+.filados > #Foto2 img:hover,
+.filauno > #Foto3 img:hover,
+.filados > #Foto3 img:hover,
+.filauno > #Foto4 img:hover,
+.filados > #Foto4 img:hover,
+.filauno > #Foto5 img:hover,
+.filados > #Foto5 img:hover,
+.filauno > #Foto6 img:hover,
+.filados > #Foto6 img:hover,
+.filauno > #Foto7 img:hover,
+.filados > #Foto7 img:hover {
+    animation-name: galeria1;
+    animation-duration: 2s;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    box-shadow: 50px 50px 20px rgba(0, 0, 0, .5);
+    transform: scale(140%);
+    transition: 1s;
+    z-index: 100;
+}
+
+.filauno > #Foto1 img {
+    transform: rotate(-10deg);
+    margin-top: -50%;
+    left: 2%;
+    z-index: 5;
+    width: 90%;
+}
+
+.filauno > #Foto1 img:hover {
+    margin-top: 15%;
+    0 left: 15%;
+    width: 130%;
+}
+
+.filauno > #Foto2 img {
+    transform: rotate(10deg);
+    margin-top: 17%;
+    left: -53%;
+    z-index: 3;
+    width: 150%;
+}
+
+.filauno > #Foto2 img:hover {
+    margin-top: 37%;
+    width: 170%;
+}
+
+.filauno > #Foto3 img {
+    transform: rotate(-10deg);
+    margin-top: 90%;
+    left: -85%;
+    z-index: 3;
+    width: 250%;
+}
+
+.filauno > #Foto3 img:hover {
+    margin-top: 60%;
+    left: 28%;
+    width: 350%;
+}
+
+.filauno > #Foto4 img {
+    transform: rotate(10deg);
+    margin-top: 20%;
+    left: 8%;
+    z-index: 6;
+    width: 90%;
+}
+
+.filauno > #Foto4 img:hover {
+    width: 120%;
+}
+
+.filauno > #Foto5 img {
+    transform: rotate(-10deg);
+    margin-top: -10%;
+    left: -255%;
+    z-index: 5;
+    width: 155%;
+}
+
+.filauno > #Foto5 img:hover {
+    margin-top: 40%;
+    left: -230%;
+    width: 175%;
+}
+
+.filauno > #Foto6 img {
+    transform: rotate(-8deg);
+    margin-top: 20%;
+    left: -100%;
+    z-index: 5;
+    width: 265%
+}
+
+.filauno > #Foto6 img:hover {
+    margin-top: 30%;
+    left: -120%
+}
+
+.filauno > #Foto7 img {
+    transform: rotate(5deg);
+    margin-top: 5%;
+    left: -180%;
+    z-index: 3;
+    width: 175%
+}
+
+.filauno > #Foto7 img:hover {
+    margin-top: 100%;
+    left: -120% width: 15%
+}
+
+/*--------------*/
+
+.filados > #Foto1 img {
+    transform: rotate(-8deg);
+    margin-top: -0%;
+    left: 5%;
+    z-index: 5;
+    width: 175%;
+}
+
+.filados > #Foto1 img:hover {
+    margin-top: 17%;
+    left: 35%;
+}
+
+.filados > #Foto2 img {
+    transform: rotate(10deg);
+    margin-top: 10%;
+    left: 35%;
+    z-index: 3;
+    width: 180%;
+}
+
+.filados > #Foto2 img:hover {
+    margin-top: 30%;
+    width: 200%;
+}
+
+.filados > #Foto3 img {
+    transform: rotate(-10deg);
+    margin-top: 5%;
+    left: 55%;
+    z-index: 3;
+    width: 95%;
+}
+
+.filados > #Foto3 img:hover {
+    margin-top: 10%;
+    left: 35%
+}
+
+.filados > #Foto4 img {
+    transform: rotate(15deg);
+    margin-top: 20%;
+    left: 20%;
+    z-index: 6;
+    width: 150%;
+}
+
+.filados > #Foto4 img:hover {
+    margin-top: 35%;
+    left: 5%;
+    width: 220%;
+}
+
+.filados > #Foto5 img {
+    transform: rotate(10deg);
+    margin-top: -35%;
+    left: 5%;
+    z-index: 5;
+    width: 125%;
+}
+
+.filados > #Foto5 img:hover {
+    margin-top: 10%;
+    left: -35%;
+
+}
+
+.filados > #Foto6 img {
+    transform: rotate(-10deg);
+    margin-top: 100%;
+    left: -110%;
+    z-index: 6;
+    width: 205%
+}
+
+.filados > #Foto6 img:hover {
+    margin-top: 30%;
+    left: -100%;
+    width: 215%
+}
+
+
+/*---- FIN GALERÍA HISTÓRICO ---*/
+
+
+
+
+
+
+
+
+/*------------------------------------------- para mediaquery.css */
+
+@media (max-width: 1200px) {
+
+    .contenedor {
+        margin: 0 2% 2% 2%;
+    }
+
+    .tituConte h2 {
+        /* color: yellow;*/
+        font-size: 1.2em;
+        margin-left: .5em;
+    }
+
+    .formulario__input,
+    .formulario__label,
+    .formulario__submit {
+        font-size: 1.1em;
+    }
+
+    .formulario__label {
+        margin-top: -62px;
+    }
+
+    .formulario__input:focus + .formulario__label {
+        margin-top: -110px;
+    }
+
+    .fijar {
+        /*--Estilo para la función de JS */
+        margin-top: -108px;
+    }
+
+
+    .fotos-slaider1 img {
+        height: auto;
+
+
+    }
+
+
+}
+
+@media (max-width: 850px) {
+
+    .contenedor {
+        margin: -3% 2% 2% 2%;
+    }
+
+    .tituConte h2 {
+        /*color: red;*/
+        font-size: 1.2em;
+        margin-left: .7em;
+    }
+
+    .formulario__input,
+    .formulario__label,
+    .formulario__submit {
+        font-size: 1em;
+    }
+
+    .formulario__label {
+        margin-top: -59px;
+    }
+
+    .formulario__input:focus + .formulario__label {
+        margin-top: -105px;
+    }
+
+    .fijar {
+        /*--Estilo para la función de JS */
+        margin-top: -105px;
+    }
+
+}
